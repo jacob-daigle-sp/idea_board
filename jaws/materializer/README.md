@@ -7,8 +7,8 @@ The purpose of this page is to illustrate what my understanding of the materiali
 ![initial](initial.png)
 
 ### High Level Understand:
-1. User interacts with Service A,B,C, which will then generate a change log which will be sent to kafka.
-2. Materializer consumes from the kafka change log, builds out models. Models are sent to a long term storage syste, a model kafka topic, and the search system.
+1. User interacts with Service A,B,C, which will then generate a change log that will be sent to kafka.
+2. Materializer consumes from the kafka change log, builds out models. Models are sent to a long term storage system, a model kafka topic, and the search system.
 3. Search builds out the full model required by elastic and saves to elastic.
 
 ### Challanges / Questions
@@ -16,14 +16,14 @@ The purpose of this page is to illustrate what my understanding of the materiali
 2. How do we scale model understanding in the materializer.
 3. How hard is this going to effect search if it has to save to elastic.
 4. What happens when we get kafka events out of order.
-5. What is the required SLA, kafka topics can build up pretty high lag, especially where user events are concerned.
+5. What is the required SLA, kafka topics can build up pretty high lag, especially where user events are concerned. You have two options here, more kafka consumers, which will top out. Or you can window events. Windowing based on changes wont allow up to build the full picture. 
 
 ## Slightly different design
 ![different](augmented.png)
 
 ### High Level Understand:
-1. User interacts with Service A,B,C, which will then generate a change log which will be sent to kafka.
-2. Materializer consumes from the kafka change long, based on the event, calls to the service with a full understanding of the model.
+1. User interacts with Service A,B,C, which will then generate a change log that will be sent to kafka.
+2. Materializer consumes from the kafka change long, based on the event, calls to the datastore/service with a full understanding of the document.
 3. Materializer transforms source model to required elastic model.
 4. Materializer saves transformed model to elastic.
 5. Search queries from elastic as needed.
