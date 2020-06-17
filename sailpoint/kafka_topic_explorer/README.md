@@ -6,18 +6,25 @@
 # Summary
 [summary]: #summary
 
-This RFC proposes the creation of a new engineering tool, the Kafka Topic Explorer. This tool will be a self service tool for developers to:
-* create kafka topics and mirror makers
-* configure kafka topics and mirror makers
-* explore kakfa topic messages
-* explore different kafka topics/tables
+This document proposes the creation of a new engineering tool, the Kafka Topic Explorer. This tool will be a self service tool for developers to:
+* create and configure kafka topics
+* create and configure and mirror makers
+* explore available kafka topics and understand their use case/creation
+* export limited kafka messages
 * understand producers and consumers of events published to different topics
+* understand topic schemas
+* inspect consumer and consumer group offsets
 
+Examples:
+    
+* [Kafka Magic](https://www.kafkamagic.com/)
+* [Kafka Tool](https://www.kafkatool.com/)
+    
 
 # Motivation
 [motivation]: #motivation`
 
-The primary motivations for this proposal are to resolve the inefficiency with interacting with kafka. As it stands today, developers are not able to easily to create topics, further to that point, developers have no way of understanding what topics currently exist and what the data within looks like. 
+The primary motivations for this proposal are to resolve the inefficiency with interacting with kafka. As it stands today, developers are not able to easily to create topics, nor have no way of understanding what topics currently exist and what the data within looks like. 
 
 Further to the above points, in the event production systems are locked down, we could use the above described tool to serve as a request/management system for kafka topics to be created.
 
