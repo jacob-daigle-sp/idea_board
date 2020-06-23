@@ -45,6 +45,7 @@ Chronicle would only host a subset of features, we may end up building another t
 [rationale-and-alternatives]: #rationale-and-alternatives
 
 Alternatives to this could be a guru page listing data dependencies, which will fall out of date. Or for easy of use in developmental purposes haveing devs downlowd something like [Kafka Magic](https://www.kafkamagic.com/) or [Kafka Tool](https://www.kafkatool.com/) which could be viewed as a security issue. 
+Another alternatives is just to host our own version of kafka tool or kafka magic. It looks like we have deployed something similar here [here](http://kafka-m-820325191.us-east-1.elb.amazonaws.com/clusters/us-east-1-dev/topics/).  
 
 # Prior art
 [prior-art]: #prior-art
