@@ -19,7 +19,7 @@ Features:
 # Motivation
 [motivation]: #motivation
 
-This feature is an important to accelerate our usage of kafka. As stream based systems get adopted it will become critical to understand what topics and tables we have, why they were created, who is consuming from them, and simplistic ways to pull data from them. 
+This feature is a potential tool to accelerate our usage of kafka. As stream based systems get adopted it will become critical to understand what topics and tables we have, why they were created, who is consuming from them, and simplistic ways to pull data from them. 
 
 Motivating examples for the above features may be:
 - A developer is looking for data xyz, rather than reaching out to many teams, they can search topics via the explorer.
@@ -44,7 +44,11 @@ Chronicle would only host a subset of features, we may end up building another t
 # Rationale and alternatives
 [rationale-and-alternatives]: #rationale-and-alternatives
 
-Alternatives to this could be a guru page listing data dependencies, which will fall out of date. Or for easy of use in developmental purposes haveing devs downlowd something like [Kafka Magic](https://www.kafkamagic.com/) or [Kafka Tool](https://www.kafkatool.com/) which could be viewed as a security issue. 
+Alternatives to this could be a guru page listing data dependencies, which will fall out of date. 
+
+For easy of use in developmental purposes, having devs download something like [Kafka Magic](https://www.kafkamagic.com/) or [Kafka Tool](https://www.kafkatool.com/) which could be viewed as a security issue.
+
+ 
 Another alternatives is just to host our own version of kafka tool or kafka magic. It looks like we have deployed something similar here [here](http://kafka-m-820325191.us-east-1.elb.amazonaws.com/clusters/us-east-1-dev/topics/).  
 
 # Prior art
